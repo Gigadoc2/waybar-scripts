@@ -78,7 +78,7 @@ class BatteryWatcher:
             css_classes = [ bat_states[self.bat.State] ]
 
             for level in bat_levels.keys():
-                if self.bat_percentage_of_design < level:
+                if self.bat_percentage_of_design <= level:
                     css_classes.append(bat_levels[level])
                     break
         else:
